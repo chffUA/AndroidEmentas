@@ -1,0 +1,10 @@
+#Mon Oct 02 19:30:12 BST 2017
+renamed.2=classes.dex
+renamed.1=classes2.dex
+renamed.0=classes3.dex
+base.2=C\:\\Users\\Asus\\AndroidStudioProjects\\entregavel\\w\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_fc2c6d6a5a9f6c713695f5affbd1880c03581018
+base.1=C\:\\Users\\Asus\\AndroidStudioProjects\\entregavel\\w\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\internal_impl-21.0.3_d60f3cad8fec5803f6a129c6706f8e33abd4a9d5
+base.0=C\:\\Users\\Asus\\AndroidStudioProjects\\entregavel\\w\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-annotations-21.0.3_f2c76288baed2ea79046d4be919f646a30f101f0
+file.2=C\:\\Users\\Asus\\AndroidStudioProjects\\entregavel\\w\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_fc2c6d6a5a9f6c713695f5affbd1880c03581018\\classes.dex
+file.1=C\:\\Users\\Asus\\AndroidStudioProjects\\entregavel\\w\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\internal_impl-21.0.3_d60f3cad8fec5803f6a129c6706f8e33abd4a9d5\\classes.dex
+file.0=C\:\\Users\\Asus\\AndroidStudioProjects\\entregavel\\w\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-annotations-21.0.3_f2c76288baed2ea79046d4be919f646a30f101f0\\classes.dex
