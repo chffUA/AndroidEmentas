@@ -4,17 +4,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.view.Menu;
 import android.widget.FrameLayout;
 
 import org.json.JSONException;
 
 public class ItemsListActivity extends FragmentActivity implements ItemsListFragment.OnItemSelectedListener {
+	private boolean isTwoPane = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(policy);
+		Item.clearItems();
 		APICaller helper = new APICaller();
 		try {
 			helper.getData();
@@ -29,6 +32,7 @@ public class ItemsListActivity extends FragmentActivity implements ItemsListFrag
 	private void determinePaneLayout() {
 		FrameLayout fragmentItemDetail = (FrameLayout) findViewById(R.id.flDetailContainer);
 		if (fragmentItemDetail != null) {
+			isTwoPane = true;
 			ItemsListFragment fragmentItemsList =
 					(ItemsListFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentItemsList);
 			fragmentItemsList.setActivateOnItemClick(true);
@@ -43,10 +47,17 @@ public class ItemsListActivity extends FragmentActivity implements ItemsListFrag
 
 	@Override
 	public void onItemSelected(Item item) {
-		// launch detail activity using intent
-		Intent i = new Intent(this, ItemDetailActivity.class);
-		i.putExtra("item", item);
-		startActivity(i);
+		if (isTwoPane) { // single activity with list and detail
+			ItemDetailFragment fragmentItem = ItemDetailFragment.newInstance(item);
+			FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+			ft.replace(R.id.flDetailContainer, fragmentItem);
+			ft.commit();
+		} else {
+			// launch detail activity using intent
+			Intent i = new Intent(this, ItemDetailActivity.class);
+			i.putExtra("item", item);
+			startActivity(i);
+		}
 	}
 }
 

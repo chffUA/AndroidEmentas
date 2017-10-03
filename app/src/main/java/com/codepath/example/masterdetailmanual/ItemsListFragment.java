@@ -10,11 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class ItemsListFragment extends Fragment {
-	private ArrayAdapter<Item> adapterItems;
+	//private ArrayAdapter<Item> adapterItems;
+	private CustomAdapter adapterItems;
 	private ListView lvItems;
 
 	private OnItemSelectedListener listener;
@@ -37,10 +37,9 @@ public class ItemsListFragment extends Fragment {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		// Create arraylist from item fixtures
 		ArrayList<Item> items = Item.getItems();
-		adapterItems = new ArrayAdapter<Item>(getActivity(),
-				android.R.layout.simple_list_item_activated_1, items);
+		adapterItems = new CustomAdapter(getActivity(), items);
+
 	}
 
 	@Override
@@ -57,7 +56,7 @@ public class ItemsListFragment extends Fragment {
 			public void onItemClick(AdapterView<?> adapterView, View item, int position,
 					long rowId) {
 				// Retrieve item based on position
-				Item i = adapterItems.getItem(position);
+				Item i = (Item) adapterItems.getItem(position);
 				// Fire selected event for item
 				listener.onItemSelected(i);
 			}

@@ -4,6 +4,10 @@
         "source": "C:\\Users\\Asus\\AndroidStudioProjects\\entregavel\\w\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\Asus\\AndroidStudioProjects\\w\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\coffee.png",
+        "source": "C:\\Users\\Asus\\AndroidStudioProjects\\w\\app\\src\\main\\res\\drawable-mdpi\\coffee.png"
+    },
+    {
         "merged": "C:\\Users\\Asus\\AndroidStudioProjects\\w\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_launcher.png",
         "source": "C:\\Users\\Asus\\AndroidStudioProjects\\w\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
     }

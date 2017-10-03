@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutItems"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
     <ListView
         android:id="@+id/lvItems"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true" >
     </ListView>
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/txItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:paddingTop="15dp" >
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imgItems"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="5dp" >
+    </ImageView>
+
+    </RelativeLayout>

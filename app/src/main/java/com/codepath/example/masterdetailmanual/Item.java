@@ -15,6 +15,10 @@ public class Item implements Serializable {
 		this.body = body;
 	}
 
+	public static void clearItems() {
+		items.clear();
+	}
+
 	public String getTitle() {
 		return title;
 	}
@@ -32,8 +36,8 @@ public class Item implements Serializable {
 		return items;
 	}
 
-	public static void addItem(String day, String content) {
-		items.add(new Item(day,content));
+	public static void addItem(String canteen, String content) {
+		items.add(new Item(canteen,content));
 	}
 
 	//public st
